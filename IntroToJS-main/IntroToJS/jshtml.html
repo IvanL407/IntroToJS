@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style></style>
+        <script>
+            function initialize()
+            {
+                numberOutput = document.getElementById("numerbout");
+                myNumber = 0;
+
+                display();
+            }
+            function addOne()
+            {
+                myNumber++;
+                display();
+            }
+            function subtractOne()
+            {
+                myNumber--;
+                display();
+            }
+            function display()
+            {
+                numberOutput.innerHTML = "myNumber";
+            }
+        </script>
+    </head>
+
+    <body onload = "initialize()";>
+        <div id = "divout">
+            You have not clicked the button.
+        </div>
+
+        <button onclick = "clickResponse();">Click me!</button>
+    </body>
+
+    <!-- Conditionals, slide 3-->
+</html>
