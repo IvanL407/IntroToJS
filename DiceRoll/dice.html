@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!--Ivan Luc, Oeriod 7/8 Even, Web Development. Program generates two random numbers.-->
+<html lang="en">
+<head>
+    <title></title>
+    <style></style>
+    <script>
+        function initialize()
+        {
+            randNumOutput = document.getElementById("rndnum");
+            generateRandomNumber();
+        }
+        function generateRandomNumber()
+        {
+            rndNumber = Math.random();
+            rndNumber *= 6;
+            rndNumber = parseInt(rndNumber);
+            rndNumber += 1;
+            display();
+        }        
+        function display()
+        {
+            randNumOutput.innerHTML = rndNumber;
+        }
+
+
+        function initialize2()
+        {
+            scdNumOutput = document.getElementById("scdnum");
+            generateSecondNumber();
+        }
+        function generateSecondNumber()
+        {
+            scdNumber = Math.random();
+            scdNumber *= 6;
+            scdNumber = parseInt(scdNumber);
+            scdNumber += 1;
+            display();
+        }
+        function displaySecond()
+        {
+            scdNumOutput.innerHTML = scdNumber;
+        }
+
+        function addNumbers()
+        {
+            total = rndNumber + scdNumber;
+        }
+    </script>
+</head>
+<body onload = "initialize();">
+    Your first number is <span id = "rndnum">0</span> 
+
+    <button onclick = "generateRandomNumber();" >
+        Generate First Number
+    </button>
+</body>
+
+<body onload = "initialize2();">
+    Your second number is <span id = "scdnum">0</span>
+    <button onclick = "generateSecondNumber();">
+        Generate Second Number
+    </button>
+</body>
+<h1 onload = "addNumbers()">Your total is:</h1>
+</html>
